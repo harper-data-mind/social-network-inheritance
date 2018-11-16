@@ -25,7 +25,7 @@ class PicturePost(Post):
         self.image_url = image_url
 
     def __str__(self):
-        return "@{} {}: ""{}""\n\t{}\n\t{}".format(self.user.first_name, self.user.last_name, self.text, self.image_url, self.timestamp.strftime('%A, %b %d, %Y'))
+        return "@{} {}: {}\n\t{}\n\t{}".format(self.user.first_name, self.user.last_name, self.text, self.image_url, self.timestamp.strftime('%A, %b %d, %Y'))
 
 
 class CheckInPost(Post): 
@@ -35,4 +35,4 @@ class CheckInPost(Post):
         self.longitude = longitude
 
     def __str__(self):
-        return "@{} Checked In: ""{}""\n\t{}, {}\n\t{}".format(self.user.first_name, self.text, self.latitude, self.longitude, self.timestamp.strftime('%A, %b %d, %Y'))
+        return "@{} Checked In: {}\n\t{}, {}\n\t{}".format(self.user.first_name, self.text, self.latitude, self.longitude, self.timestamp.strftime('%A, %b %d, %Y'))
